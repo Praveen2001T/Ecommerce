@@ -1,0 +1,88 @@
+.signUp {
+  width: 100%;
+  height: 100vh;
+  background: #fce3fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signUp_container {
+  border-radius: 30px;
+  width: 420px;
+  background: white;
+  margin: auto;
+  padding: 50px;
+}
+
+.signUp_fields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.signUp_fields input {
+  height: 45px;
+  width: 395px;
+  padding-left: 15px;
+  border: 1px solid #c9c9c9;
+  outline: none;
+  color: #5c5c5c;
+  font-size: 16px;
+}
+
+.signUp_container button {
+  width: 415px;
+  height: 45px;
+  color: white;
+  background: #ff4141;
+  margin-top: 20px;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.signUp_login {
+  margin-top: 20px;
+  color: #5c5c5c;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.signUp_login span {
+  color: #ff4141;
+  font-weight: 600;
+}
+
+.signUp_agree {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+  color: #5c5c5c;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.agree_input {
+  display: flex;
+  align-items: flex-start !important;
+}
+
+.header {
+  cursor: pointer;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signUp_inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
