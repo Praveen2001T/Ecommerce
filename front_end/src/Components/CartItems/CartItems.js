@@ -31,24 +31,24 @@ const CartItems = () => {
         </Grid>
       </Grid>
       <hr />
-      {All_products.filter((item) => cartItems[item.id] > 0).map((item) => {
+      {All_products?.filter((item) => cartItems[item.id] > 0).map((item) => {
         return (
           <div>
             <Grid item={12} container spacing={3} className='format_main'>
               <Grid item xs={1} className='format_content'>
-                <img src={item.image} alt='Item' className='cart_image' />
+                <img src={item?.image} alt='Item' className='cart_image' />
               </Grid>
               <Grid item xs={3.5} className='format_content'>
-                <p>{item.name}</p>
+                <p>{item?.name}</p>
               </Grid>
               <Grid item xs={2} className='format_content'>
-                <p>${item.new_price}</p>
+                <p>${item?.new_price}</p>
               </Grid>
               <Grid item xs={2} className='format_content'>
                 <button className='quantity_btn'>{cartItems[item.id]}</button>
               </Grid>
               <Grid item xs={2} className='format_content'>
-                <p>${item.new_price * cartItems[item.id]}</p>
+                <p>${item?.new_price * cartItems[item.id]}</p>
               </Grid>
               <Grid item xs={1} className='format_content'>
                 <img

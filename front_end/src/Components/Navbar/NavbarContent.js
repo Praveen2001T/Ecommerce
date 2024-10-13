@@ -9,12 +9,12 @@ import { ShopContext } from "../../Context/ShopContext";
 const NavbarContent = () => {
   const { itemCount } = useContext(ShopContext);
   return (
-    <div className="navbar">
-      <div className="nav_logo">
-        <img src={Logo} alt="Shopping-Logo" height={60} width={60} />
-        <p>SHOPPER</p>
+    <div className='navbar'>
+      <div className='nav_logo'>
+        <img src={Logo} alt='Shopping-Logo' height={60} width={60} />
+        <p>Glamour</p>
       </div>
-      <ul className="nav_menu">
+      <ul className='nav_menu'>
         <li>
           <Link to={"/"} style={{ textDecoration: "none" }}>
             Shop
@@ -36,7 +36,7 @@ const NavbarContent = () => {
           </Link>
         </li>
       </ul>
-      <div className="nav_login">
+      <div className='nav_login'>
         {localStorage.getItem("auth-token") ? (
           <button
             onClick={() => {
@@ -52,9 +52,9 @@ const NavbarContent = () => {
           </Link>
         )}
         <Link to={"/cart"}>
-          <img src={ShoppingCart} alt="Shopping-Cart" height={30} width={30} />
+          <img src={ShoppingCart} alt='Shopping-Cart' height={30} width={30} />
         </Link>
-        <div className="cart_count">{itemCount}</div>
+        <div className='cart_count'>{itemCount}</div>
       </div>
     </div>
   );
