@@ -1,22 +1,23 @@
-import React from "react";
-import "./NewCollections.css";
+import React from 'react';
+import './NewCollections.css';
 // import data_collections from "../Assets/new_collections";
-import Item from "../Item/Item";
-import { Grid } from "@mui/material";
-import { useEffect } from "react";
-import axios from "axios";
-import { useState } from "react";
+import Item from '../Item/Item';
+import { Grid } from '@mui/material';
+import { useEffect } from 'react';
+import axios from 'axios';
+import { useState } from 'react';
 
 const NewCollections = () => {
   const [data_collections, setData_collections] = useState([]);
+  const API_URL = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        let response = await axios.get("http://localhost:4000/newCollections");
+        let response = await axios.get(`${API_URL}/newCollections`);
         console.log(response);
         setData_collections(response.data);
-        if (response && typeof response.destroy === "function") {
+        if (response && typeof response.destroy === 'function') {
           response.destroy();
         }
       } catch (err) {

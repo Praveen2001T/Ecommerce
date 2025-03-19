@@ -1,21 +1,22 @@
-import React from "react";
+import React from 'react';
 // import data_product from "../Assets/data";
-import Item from "../Item/Item";
-import "./Product.css";
-import { Grid } from "@mui/material";
-import { useState } from "react";
-import { useEffect } from "react";
-import axios from "axios";
+import Item from '../Item/Item';
+import './Product.css';
+import { Grid } from '@mui/material';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import axios from 'axios';
 
 const Product = () => {
   const [data_product, setData_product] = useState([]);
+  const API_URL = process.env.REACT_APP_API_URL;
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        let response = await axios.get("http://localhost:4000/popularInWomen");
+        let response = await axios.get(`${API_URL}/popularInWomen`);
         console.log(response);
         setData_product(response.data);
-        if (response && typeof response.destroy === "function") {
+        if (response && typeof response.destroy === 'function') {
           response.destroy();
         }
       } catch (err) {
