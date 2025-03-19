@@ -7,6 +7,7 @@ const multer = require('multer');
 const path = require('path');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+require('dotenv').config();
 
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
@@ -17,9 +18,7 @@ app.use(cors());
 //Database Connection with mongoDB
 
 mongoose
-  .connect(
-    'mongodb+srv://praveen:Praveen1606@cluster0.qmskfad.mongodb.net/e-commerce'
-  )
+  .connect(process.env.MONGO_URI)
   .then(() => console.log('DB connected successfully'))
   .catch((err) => console.log('Connection failed:', err.message));
 
